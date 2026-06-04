@@ -1,32 +1,25 @@
 #!/bin/bash
 set -euo pipefail
 
-# Build Power Lens and package as ZIP + DMG
+# Build Power Lens, sign, notarize, and package as ZIP + DMG
 # Usage: ./scripts/build-and-package.sh [version]
-# Auto-increments CFBundleVersion on each build.
-# Auto-detects signing identity (Developer ID > Apple Development > adhoc).
+# Prerequisites: Developer ID Application certificate + app-specific password in Keychain
 
 PROJECT="PowerLens.xcodeproj"
 SCHEME="Power Lens"
 APP_NAME="Power Lens"
 CONFIG="Release"
 PLIST="PowerLens/Resources/Info.plist"
+BUNDLE_ID="com.powerlens.app"
 
-# Detect signing identity
-SIGN_IDENTITY=$(security find-identity -v -p codesigning 2>/dev/null \
-    | grep "Developer ID Application" | head -1 | sed 's/.*"\(.*\)".*/\1/' || true)
-
-if [ -z "$SIGN_IDENTITY" ]; then
-    SIGN_IDENTITY=$(security find-identity -v -p codesigning 2>/dev/null \
-        | grep "Apple Development" | head -1 | sed 's/.*"\(.*\)".*/\1/' || true)
-fi
-
-if [ -n "$SIGN_IDENTITY" ]; then
-    echo "==> Signing identity: ${SIGN_IDENTITY}"
-    CODE_SIGN_FLAGS="CODE_SIGN_IDENTITY=\"${SIGN_IDENTITY}\" CODE_SIGN_STYLE=Manual"
-else
-    echo "==> No signing identity found, building unsigned"
-    CODE_SIGN_FLAGS="CODE_SIGN_IDENTITY=\"-\" CODE_SIGNING_REQUIRED=NO"
+# Signing identity
+# Signing — read from local xcconfig (gitignored)
+SIGN_IDENTITY=""
+TEAM_ID=""
+XCCONFIG="PowerLens.xcconfig"
+if [ -f "$XCCONFIG" ]; then
+    SIGN_IDENTITY=$(grep CODE_SIGN_IDENTITY "$XCCONFIG" | head -1 | sed 's/.*= *"//;s/";$//')
+    TEAM_ID=$(grep DEVELOPMENT_TEAM "$XCCONFIG" | head -1 | sed 's/.*= *//;s/ *;.*//')
 fi
 
 # Determine version
@@ -45,19 +38,12 @@ BUILD_NUM=$((BUILD_NUM + 1))
 echo "==> Building ${APP_NAME} v${VERSION} (${BUILD_NUM})..."
 
 DERIVED_DATA="build"
-if [ -n "$SIGN_IDENTITY" ]; then
-    xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" \
-        -derivedDataPath "${DERIVED_DATA}" \
-        CODE_SIGN_IDENTITY="${SIGN_IDENTITY}" \
-        CODE_SIGN_STYLE=Manual \
-        build 2>&1 | tail -1
-else
-    xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" \
-        -derivedDataPath "${DERIVED_DATA}" \
-        CODE_SIGN_IDENTITY="-" \
-        CODE_SIGNING_REQUIRED=NO \
-        build 2>&1 | tail -1
-fi
+xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" \
+    -derivedDataPath "${DERIVED_DATA}" \
+    CODE_SIGN_IDENTITY="${SIGN_IDENTITY}" \
+    CODE_SIGN_STYLE=Manual \
+    DEVELOPMENT_TEAM="${TEAM_ID}" \
+    build 2>&1 | tail -1
 
 APP_PATH="${DERIVED_DATA}/Build/Products/${CONFIG}/${APP_NAME}.app"
 if [ ! -d "${APP_PATH}" ]; then
@@ -65,11 +51,30 @@ if [ ! -d "${APP_PATH}" ]; then
     exit 1
 fi
 
-echo "    App: ${APP_PATH}"
-
 # Verify signature
 echo "==> Verifying signature..."
-codesign -dv "${APP_PATH}" 2>&1 | grep -q "Signature size" && echo "    Signed ✓" || echo "    Unsigned"
+codesign --verify --deep --strict "${APP_PATH}" 2>&1 && echo "    Signature valid ✓" || {
+    echo "    Signature INVALID" >&2
+    exit 1
+}
+
+# Notarize
+NOTARIZE_PROFILE="${NOTARIZE_PROFILE:-}"
+if [ -n "${NOTARIZE_PROFILE}" ]; then
+    echo "==> Notarizing..."
+    # Create ZIP for notarization
+    NOTARIZE_ZIP=$(mktemp /tmp/powerlens-XXXXXX.zip)
+    ditto -c -k --keepParent "${APP_PATH}" "${NOTARIZE_ZIP}"
+
+    # Submit
+    xcrun notarytool submit "${NOTARIZE_ZIP}" --keychain-profile "${NOTARIZE_PROFILE}" --wait 2>&1 | tail -5
+    rm -f "${NOTARIZE_ZIP}"
+
+    # Staple
+    xcrun stapler staple "${APP_PATH}" 2>&1 && echo "    Notarization stapled ✓"
+else
+    echo "==> Skipping notarization (set NOTARIZE_PROFILE to enable)"
+fi
 
 # Package
 ZIP_NAME="Power_Lens_v${VERSION}.zip"

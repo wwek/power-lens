@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A1000105000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000205000000000000001 /* Assets.xcassets */; };
-		A1000105000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000205000000000000001 /* Assets.xcassets */; };
-				A1000101000000000000001 /* PowerLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000201000000000000001 /* PowerLensApp.swift */; };
+		A1000101000000000000001 /* PowerLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000201000000000000001 /* PowerLensApp.swift */; };
 		A1000102000000000000001 /* MenuBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000202000000000000001 /* MenuBarPanel.swift */; };
 		A1000104000000000000001 /* PowerLensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000206000000000000001 /* PowerLensViewModel.swift */; };
+		A1000105000000000000001 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1000205000000000000001 /* Assets.xcassets */; };
 		A1000110000000000000001 /* BatteryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000210000000000000001 /* BatteryInfo.swift */; };
 		A1000111000000000000001 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000211000000000000001 /* ProcessInfo.swift */; };
 		A1000112000000000000001 /* SleepAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000212000000000000001 /* SleepAssertion.swift */; };
@@ -312,16 +311,16 @@
 		};
 		A1000903000000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = PowerLens.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PowerLens/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				"INFOPLIST_KEY_CFBundleDisplayName[sdk=macosx*]" = "Power Lens DEV";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,16 +338,16 @@
 		};
 		A1000904000000000000001 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = PowerLens.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = PowerLens/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				"INFOPLIST_KEY_CFBundleDisplayName[sdk=macosx*]" = "Power Lens";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
