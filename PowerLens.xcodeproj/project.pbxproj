@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1000101000000000000001 /* PowerLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000201000000000000001 /* PowerLensApp.swift */; };
+		A1000102000000000000001 /* MenuBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000202000000000000001 /* MenuBarPanel.swift */; };
+		A1000103000000000000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000203000000000000001 /* SettingsView.swift */; };
+		A1000104000000000000001 /* PowerLensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000206000000000000001 /* PowerLensViewModel.swift */; };
+		A1000110000000000000001 /* BatteryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000210000000000000001 /* BatteryInfo.swift */; };
+		A1000111000000000000001 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000211000000000000001 /* ProcessInfo.swift */; };
+		A1000112000000000000001 /* SleepAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000212000000000000001 /* SleepAssertion.swift */; };
+		A1000113000000000000001 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000213000000000000001 /* AppSettings.swift */; };
+		A1000120000000000000001 /* BatteryCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000220000000000000001 /* BatteryCollector.swift */; };
+		A1000121000000000000001 /* ProcessCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000221000000000000001 /* ProcessCollector.swift */; };
+		A1000122000000000000001 /* SleepAssertionCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000222000000000000001 /* SleepAssertionCollector.swift */; };
+		A1000130000000000000001 /* PowerScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000230000000000000001 /* PowerScore.swift */; };
+		A1000131000000000000001 /* PowerScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000231000000000000001 /* PowerScorer.swift */; };
+		A1000132000000000000001 /* RecommendationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000232000000000000001 /* RecommendationEngine.swift */; };
+		A1000133000000000000001 /* PowerEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000233000000000000001 /* PowerEvent.swift */; };
+		A1000134000000000000001 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000234000000000000001 /* EventStore.swift */; };
+		A1000135000000000000001 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = A1000240000000000000001 /* GRDB */; };
+		A1000136000000000000001 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000208000000000000001 /* MainWindow.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1000201000000000000001 /* PowerLensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerLensApp.swift; sourceTree = "<group>"; };
+		A1000202000000000000001 /* MenuBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPanel.swift; sourceTree = "<group>"; };
+		A1000203000000000000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A1000204000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1000205000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1000206000000000000001 /* PowerLensViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerLensViewModel.swift; sourceTree = "<group>"; };
+		A1000208000000000000001 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		A1000210000000000000001 /* BatteryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryInfo.swift; sourceTree = "<group>"; };
+		A1000211000000000000001 /* ProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo.swift; sourceTree = "<group>"; };
+		A1000212000000000000001 /* SleepAssertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAssertion.swift; sourceTree = "<group>"; };
+		A1000213000000000000001 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		A1000220000000000000001 /* BatteryCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryCollector.swift; sourceTree = "<group>"; };
+		A1000221000000000000001 /* ProcessCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessCollector.swift; sourceTree = "<group>"; };
+		A1000222000000000000001 /* SleepAssertionCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepAssertionCollector.swift; sourceTree = "<group>"; };
+		A1000230000000000000001 /* PowerScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerScore.swift; sourceTree = "<group>"; };
+		A1000231000000000000001 /* PowerScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerScorer.swift; sourceTree = "<group>"; };
+		A1000232000000000000001 /* RecommendationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationEngine.swift; sourceTree = "<group>"; };
+		A1000233000000000000001 /* PowerEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerEvent.swift; sourceTree = "<group>"; };
+		A1000234000000000000001 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
+		A1000301000000000000001 /* Power Lens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Power Lens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1000401000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000135000000000000001 /* GRDB in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1000501000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A1000502000000000000001 /* PowerLens */,
+				A1000503000000000000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1000502000000000000001 /* PowerLens */ = {
+			isa = PBXGroup;
+			children = (
+				A1000504000000000000001 /* App */,
+				A1000505000000000000001 /* Collectors */,
+				A1000506000000000000001 /* Models */,
+				A1000507000000000000001 /* Scoring */,
+				A1000508000000000000001 /* Recommendations */,
+				A1000509000000000000001 /* Storage */,
+				A1000510000000000000001 /* Resources */,
+			);
+			path = PowerLens;
+			sourceTree = "<group>";
+		};
+		A1000503000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1000301000000000000001 /* Power Lens.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1000504000000000000001 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1000201000000000000001 /* PowerLensApp.swift */,
+				A1000206000000000000001 /* PowerLensViewModel.swift */,
+				A1000208000000000000001 /* MainWindow.swift */,
+				A1000202000000000000001 /* MenuBarPanel.swift */,
+				A1000203000000000000001 /* SettingsView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1000505000000000000001 /* Collectors */ = {
+			isa = PBXGroup;
+			children = (
+				A1000220000000000000001 /* BatteryCollector.swift */,
+				A1000221000000000000001 /* ProcessCollector.swift */,
+				A1000222000000000000001 /* SleepAssertionCollector.swift */,
+			);
+			path = Collectors;
+			sourceTree = "<group>";
+		};
+		A1000506000000000000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1000210000000000000001 /* BatteryInfo.swift */,
+				A1000211000000000000001 /* ProcessInfo.swift */,
+				A1000212000000000000001 /* SleepAssertion.swift */,
+				A1000213000000000000001 /* AppSettings.swift */,
+				A1000233000000000000001 /* PowerEvent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1000507000000000000001 /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				A1000230000000000000001 /* PowerScore.swift */,
+				A1000231000000000000001 /* PowerScorer.swift */,
+			);
+			path = Scoring;
+			sourceTree = "<group>";
+		};
+		A1000508000000000000001 /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				A1000232000000000000001 /* RecommendationEngine.swift */,
+			);
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		A1000509000000000000001 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A1000234000000000000001 /* EventStore.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		A1000510000000000000001 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1000204000000000000001 /* Info.plist */,
+				A1000205000000000000001 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1000601000000000000001 /* Power Lens */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1000703000000000000001 /* Build configuration list for PBXNativeTarget "Power Lens" */;
+			buildPhases = (
+				A1000602000000000000001 /* Sources */,
+				A1000401000000000000001 /* Frameworks */,
+				A1000603000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Power Lens";
+			productName = "Power Lens";
+			productReference = A1000301000000000000001 /* Power Lens.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1000801000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A1000601000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A1000701000000000000001 /* Build configuration list for PBXProject "PowerLens" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+				"zh-Hant",
+				ja,
+				ko,
+			);
+			mainGroup = A1000501000000000000001;
+			packageReferences = (
+				A1000250000000000000001 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
+			productRefGroup = A1000503000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1000601000000000000001 /* Power Lens */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1000603000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1000602000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000101000000000000001 /* PowerLensApp.swift in Sources */,
+				A1000104000000000000001 /* PowerLensViewModel.swift in Sources */,
+				A1000136000000000000001 /* MainWindow.swift in Sources */,
+				A1000102000000000000001 /* MenuBarPanel.swift in Sources */,
+				A1000103000000000000001 /* SettingsView.swift in Sources */,
+				A1000120000000000000001 /* BatteryCollector.swift in Sources */,
+				A1000121000000000000001 /* ProcessCollector.swift in Sources */,
+				A1000122000000000000001 /* SleepAssertionCollector.swift in Sources */,
+				A1000130000000000000001 /* PowerScore.swift in Sources */,
+				A1000131000000000000001 /* PowerScorer.swift in Sources */,
+				A1000132000000000000001 /* RecommendationEngine.swift in Sources */,
+				A1000110000000000000001 /* BatteryInfo.swift in Sources */,
+				A1000111000000000000001 /* ProcessInfo.swift in Sources */,
+				A1000112000000000000001 /* SleepAssertion.swift in Sources */,
+				A1000113000000000000001 /* AppSettings.swift in Sources */,
+				A1000133000000000000001 /* PowerEvent.swift in Sources */,
+				A1000134000000000000001 /* EventStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A1000901000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A1000902000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		A1000903000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PowerLens/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.powerlens.app;
+				PRODUCT_NAME = "Power Lens";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		A1000904000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PowerLens/Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.powerlens.app;
+				PRODUCT_NAME = "Power Lens";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1000701000000000000001 /* Build configuration list for PBXProject "PowerLens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000901000000000000001 /* Debug */,
+				A1000902000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1000703000000000000001 /* Build configuration list for PBXNativeTarget "Power Lens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000903000000000000001 /* Debug */,
+				A1000904000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A1000250000000000000001 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A1000240000000000000001 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1000250000000000000001 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A1000801000000000000001 /* Project object */;
+}

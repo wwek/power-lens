@@ -1,0 +1,32 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserdata
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.moved-aside
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# SPM
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# IDE
+*.swp
+*.swo
+*~
+.idea/
+
+# Secrets
+.env
+.env.*
+credentials*

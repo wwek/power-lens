@@ -1,0 +1,1334 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "1 day": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "1 天"
+        },
+        "zh-Hant": {
+          "string": "1 天"
+        },
+        "ja": {
+          "string": "1 日"
+        },
+        "ko": {
+          "string": "1일"
+        }
+      }
+    },
+    "14 days": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "14 天"
+        },
+        "zh-Hant": {
+          "string": "14 天"
+        },
+        "ja": {
+          "string": "14 日"
+        },
+        "ko": {
+          "string": "14일"
+        }
+      }
+    },
+    "3 days": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "3 天"
+        },
+        "zh-Hant": {
+          "string": "3 天"
+        },
+        "ja": {
+          "string": "3 日"
+        },
+        "ko": {
+          "string": "3일"
+        }
+      }
+    },
+    "7 days": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "7 天"
+        },
+        "zh-Hant": {
+          "string": "7 天"
+        },
+        "ja": {
+          "string": "7 日"
+        },
+        "ko": {
+          "string": "7일"
+        }
+      }
+    },
+    "AC Power": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "电源供电"
+        },
+        "zh-Hant": {
+          "string": "電源供電"
+        },
+        "ja": {
+          "string": "電源接続"
+        },
+        "ko": {
+          "string": "전원 연결"
+        }
+      }
+    },
+    "Abnormal": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "异常"
+        },
+        "zh-Hant": {
+          "string": "異常"
+        },
+        "ja": {
+          "string": "異常"
+        },
+        "ko": {
+          "string": "비정상"
+        }
+      }
+    },
+    "About": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "关于"
+        },
+        "zh-Hant": {
+          "string": "關於"
+        },
+        "ja": {
+          "string": "概要"
+        },
+        "ko": {
+          "string": "정보"
+        }
+      }
+    },
+    "Alerts": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "提醒"
+        },
+        "zh-Hant": {
+          "string": "提醒"
+        },
+        "ja": {
+          "string": "アラート"
+        },
+        "ko": {
+          "string": "알림"
+        }
+      }
+    },
+    "Background Active": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "后台活跃"
+        },
+        "zh-Hant": {
+          "string": "背景活躍"
+        },
+        "ja": {
+          "string": "バックグラウンドアクティブ"
+        },
+        "ko": {
+          "string": "백그라운드 활성"
+        }
+      }
+    },
+    "Background task active": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "后台任务活跃"
+        },
+        "zh-Hant": {
+          "string": "背景任務活躍"
+        },
+        "ja": {
+          "string": "バックグラウンドタスク実行中"
+        },
+        "ko": {
+          "string": "백그라운드 작업 활성"
+        }
+      }
+    },
+    "Battery": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "电池"
+        },
+        "zh-Hant": {
+          "string": "電池"
+        },
+        "ja": {
+          "string": "バッテリー"
+        },
+        "ko": {
+          "string": "배터리"
+        }
+      }
+    },
+    "Battery not available": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "电池不可用"
+        },
+        "zh-Hant": {
+          "string": "電池不可用"
+        },
+        "ja": {
+          "string": "バッテリーなし"
+        },
+        "ko": {
+          "string": "배터리 없음"
+        }
+      }
+    },
+    "Battery power diagnosis for your Mac": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "Mac 电池耗电诊断"
+        },
+        "zh-Hant": {
+          "string": "Mac 電池耗電診斷"
+        },
+        "ja": {
+          "string": "Mac バッテリー診断"
+        },
+        "ko": {
+          "string": "Mac 배터리 진단"
+        }
+      }
+    },
+    "Caffeinate active": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "Caffeinate 活跃"
+        },
+        "zh-Hant": {
+          "string": "Caffeinate 活躍"
+        },
+        "ja": {
+          "string": "Caffeinate 実行中"
+        },
+        "ko": {
+          "string": "Caffeinate 활성"
+        }
+      }
+    },
+    "Charging": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "充电中"
+        },
+        "zh-Hant": {
+          "string": "充電中"
+        },
+        "ja": {
+          "string": "充電中"
+        },
+        "ko": {
+          "string": "충전 중"
+        }
+      }
+    },
+    "Check Activity Monitor for details": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "查看活动监视器了解详情"
+        },
+        "zh-Hant": {
+          "string": "查看活動監視器了解詳情"
+        },
+        "ja": {
+          "string": "アクティビティモニタで詳細を確認"
+        },
+        "ko": {
+          "string": "활동 모니터에서 자세히 확인"
+        }
+      }
+    },
+    "Check browser extensions": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "检查浏览器扩展"
+        },
+        "zh-Hant": {
+          "string": "檢查瀏覽器擴展"
+        },
+        "ja": {
+          "string": "ブラウザ拡張機能を確認"
+        },
+        "ko": {
+          "string": "브라우저 확장 프로그램 확인"
+        }
+      }
+    },
+    "Check for active file transfers or calls": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "检查是否有文件传输或通话"
+        },
+        "zh-Hant": {
+          "string": "檢查是否有檔案傳輸或通話"
+        },
+        "ja": {
+          "string": "ファイル転送や通話がないか確認"
+        },
+        "ko": {
+          "string": "파일 전송 또는 통화 중인지 확인"
+        }
+      }
+    },
+    "Check for large file uploads or downloads": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "检查是否有大文件上传或下载"
+        },
+        "zh-Hant": {
+          "string": "檢查是否有大檔案上傳或下載"
+        },
+        "ja": {
+          "string": "大きなファイルのアップロード/ダウンロードを確認"
+        },
+        "ko": {
+          "string": "대용량 파일 업로드/다운로드 확인"
+        }
+      }
+    },
+    "Check if plugins are misbehaving": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "检查插件是否异常"
+        },
+        "zh-Hant": {
+          "string": "檢查插件是否異常"
+        },
+        "ja": {
+          "string": "プラグインの異常動作を確認"
+        },
+        "ko": {
+          "string": "플러그인 비정상 동작 확인"
+        }
+      }
+    },
+    "Check if this app needs to keep Mac awake": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "检查此应用是否需要保持唤醒"
+        },
+        "zh-Hant": {
+          "string": "檢查此應用是否需要保持喚醒"
+        },
+        "ja": {
+          "string": "このアプリがMacの起動を維持する必要があるか確認"
+        },
+        "ko": {
+          "string": "이 앱이 Mac을 깨어있게 할 필요가 있는지 확인"
+        }
+      }
+    },
+    "Close if you want Mac to sleep normally": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "如果希望 Mac 正常睡眠，请关闭"
+        },
+        "zh-Hant": {
+          "string": "如果希望 Mac 正常睡眠，請關閉"
+        },
+        "ja": {
+          "string": "Macを通常通りスリープさせる場合は閉じてください"
+        },
+        "ko": {
+          "string": "Mac이 정상적으로 절전하도록 하려면 닫으세요"
+        }
+      }
+    },
+    "Close the app after the meeting ends": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "会议结束后关闭应用"
+        },
+        "zh-Hant": {
+          "string": "會議結束後關閉應用"
+        },
+        "ja": {
+          "string": "会議終了後にアプリを閉じる"
+        },
+        "ko": {
+          "string": "회의 종료 후 앱 닫기"
+        }
+      }
+    },
+    "Close unnecessary chat windows": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "关闭不必要的聊天窗口"
+        },
+        "zh-Hant": {
+          "string": "關閉不必要的聊天視窗"
+        },
+        "ja": {
+          "string": "不要なチャットウィンドウを閉じる"
+        },
+        "ko": {
+          "string": "불필요한 채팅 창 닫기"
+        }
+      }
+    },
+    "Close unused project windows": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "关闭未使用的项目窗口"
+        },
+        "zh-Hant": {
+          "string": "關閉未使用的專案視窗"
+        },
+        "ja": {
+          "string": "使用していないプロジェクトウィンドウを閉じる"
+        },
+        "ko": {
+          "string": "사용하지 않는 프로젝트 창 닫기"
+        }
+      }
+    },
+    "Close unused tabs": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "关闭未使用的标签页"
+        },
+        "zh-Hant": {
+          "string": "關閉未使用的分頁"
+        },
+        "ja": {
+          "string": "使用していないタブを閉じる"
+        },
+        "ko": {
+          "string": "사용하지 않는 탭 닫기"
+        }
+      }
+    },
+    "Close video or live stream pages": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "关闭视频或直播页面"
+        },
+        "zh-Hant": {
+          "string": "關閉影片或直播頁面"
+        },
+        "ja": {
+          "string": "動画やライブストリーミングページを閉じる"
+        },
+        "ko": {
+          "string": "동영상 또는 라이브 스트리밍 페이지 닫기"
+        }
+      }
+    },
+    "Collection": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "采集"
+        },
+        "zh-Hant": {
+          "string": "收集"
+        },
+        "ja": {
+          "string": "収集"
+        },
+        "ko": {
+          "string": "수집"
+        }
+      }
+    },
+    "Collection Interval": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "采集间隔"
+        },
+        "zh-Hant": {
+          "string": "收集間隔"
+        },
+        "ja": {
+          "string": "収集間隔"
+        },
+        "ko": {
+          "string": "수집 간격"
+        }
+      }
+    },
+    "Consider quitting if not in use": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "如果不使用，建议退出"
+        },
+        "zh-Hant": {
+          "string": "如果不使用，建議退出"
+        },
+        "ja": {
+          "string": "使用しない場合は終了を検討"
+        },
+        "ko": {
+          "string": "사용하지 않으면 종료 권장"
+        }
+      }
+    },
+    "General": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "通用"
+        },
+        "zh-Hant": {
+          "string": "一般"
+        },
+        "ja": {
+          "string": "一般"
+        },
+        "ko": {
+          "string": "일반"
+        }
+      }
+    },
+    "GitHub": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "GitHub"
+        },
+        "zh-Hant": {
+          "string": "GitHub"
+        },
+        "ja": {
+          "string": "GitHub"
+        },
+        "ko": {
+          "string": "GitHub"
+        }
+      }
+    },
+    "High": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "高"
+        },
+        "zh-Hant": {
+          "string": "高"
+        },
+        "ja": {
+          "string": "高"
+        },
+        "ko": {
+          "string": "높음"
+        }
+      }
+    },
+    "High CPU": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "CPU 占用高"
+        },
+        "zh-Hant": {
+          "string": "CPU 佔用高"
+        },
+        "ja": {
+          "string": "CPU使用率が高い"
+        },
+        "ko": {
+          "string": "CPU 사용률 높음"
+        }
+      }
+    },
+    "High Memory": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "内存占用高"
+        },
+        "zh-Hant": {
+          "string": "記憶體佔用高"
+        },
+        "ja": {
+          "string": "メモリ使用量が多い"
+        },
+        "ko": {
+          "string": "메모리 사용량 높음"
+        }
+      }
+    },
+    "Highest drain: %@ (%d)": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "最高耗电：%@（%d）"
+        },
+        "zh-Hant": {
+          "string": "最高耗電：%@（%d）"
+        },
+        "ja": {
+          "string": "最高消費：%@（%d）"
+        },
+        "ko": {
+          "string": "최고 소모：%@（%d）"
+        }
+      }
+    },
+    "History": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "历史"
+        },
+        "zh-Hant": {
+          "string": "歷史"
+        },
+        "ja": {
+          "string": "履歴"
+        },
+        "ko": {
+          "string": "기록"
+        }
+      }
+    },
+    "History coming soon": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "历史功能即将推出"
+        },
+        "zh-Hant": {
+          "string": "歷史功能即將推出"
+        },
+        "ja": {
+          "string": "履歴機能は近日公開"
+        },
+        "ko": {
+          "string": "기록 기능 곧 출시"
+        }
+      }
+    },
+    "Keeping Mac awake": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "正在保持 Mac 不休眠"
+        },
+        "zh-Hant": {
+          "string": "正在保持 Mac 不休眠"
+        },
+        "ja": {
+          "string": "Macのスリープを防止中"
+        },
+        "ko": {
+          "string": "Mac 절전 방지 중"
+        }
+      }
+    },
+    "Launch at Login": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "开机启动"
+        },
+        "zh-Hant": {
+          "string": "開機啟動"
+        },
+        "ja": {
+          "string": "ログイン時に起動"
+        },
+        "ko": {
+          "string": "로그인 시 실행"
+        }
+      }
+    },
+    "License": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "许可证"
+        },
+        "zh-Hant": {
+          "string": "授權條款"
+        },
+        "ja": {
+          "string": "ライセンス"
+        },
+        "ko": {
+          "string": "라이선스"
+        }
+      }
+    },
+    "Low Battery Threshold": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "低电量阈值"
+        },
+        "zh-Hant": {
+          "string": "低電量閾值"
+        },
+        "ja": {
+          "string": "低バッテリーしきい値"
+        },
+        "ko": {
+          "string": "저배터리 임계값"
+        }
+      }
+    },
+    "Low Power Mode": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "低电量模式"
+        },
+        "zh-Hant": {
+          "string": "低電量模式"
+        },
+        "ja": {
+          "string": "低電力モード"
+        },
+        "ko": {
+          "string": "저전력 모드"
+        }
+      }
+    },
+    "Many Processes": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "进程较多"
+        },
+        "zh-Hant": {
+          "string": "程序較多"
+        },
+        "ja": {
+          "string": "プロセス数が多い"
+        },
+        "ko": {
+          "string": "프로세스가 많음"
+        }
+      }
+    },
+    "Moderate": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "中等"
+        },
+        "zh-Hant": {
+          "string": "中等"
+        },
+        "ja": {
+          "string": "中程度"
+        },
+        "ko": {
+          "string": "보통"
+        }
+      }
+    },
+    "No apps preventing sleep": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "没有应用阻止睡眠"
+        },
+        "zh-Hant": {
+          "string": "沒有應用阻止睡眠"
+        },
+        "ja": {
+          "string": "スリープを妨げているアプリはありません"
+        },
+        "ko": {
+          "string": "절전을 방해하는 앱이 없습니다"
+        }
+      }
+    },
+    "No significant power drain detected": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "未发现明显耗电"
+        },
+        "zh-Hant": {
+          "string": "未發現明顯耗電"
+        },
+        "ja": {
+          "string": "大きな消費は検出されませんでした"
+        },
+        "ko": {
+          "string": "큰 전력 소모가 감지되지 않았습니다"
+        }
+      }
+    },
+    "Normal": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "正常"
+        },
+        "zh-Hant": {
+          "string": "正常"
+        },
+        "ja": {
+          "string": "正常"
+        },
+        "ko": {
+          "string": "정상"
+        }
+      }
+    },
+    "Normal system behavior": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "正常系统行为"
+        },
+        "zh-Hant": {
+          "string": "正常系統行為"
+        },
+        "ja": {
+          "string": "正常なシステム動作"
+        },
+        "ko": {
+          "string": "정상적인 시스템 동작"
+        }
+      }
+    },
+    "On Battery": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "电池供电"
+        },
+        "zh-Hant": {
+          "string": "電池供電"
+        },
+        "ja": {
+          "string": "バッテリー動作"
+        },
+        "ko": {
+          "string": "배터리 전원"
+        }
+      }
+    },
+    "Open Power Lens": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "打开 Power Lens"
+        },
+        "zh-Hant": {
+          "string": "開啟 Power Lens"
+        },
+        "ja": {
+          "string": "Power Lens を開く"
+        },
+        "ko": {
+          "string": "Power Lens 열기"
+        }
+      }
+    },
+    "Overview": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "概览"
+        },
+        "zh-Hant": {
+          "string": "概覽"
+        },
+        "ja": {
+          "string": "概要"
+        },
+        "ko": {
+          "string": "개요"
+        }
+      }
+    },
+    "Pause non-essential containers": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "暂停非必要容器"
+        },
+        "zh-Hant": {
+          "string": "暫停非必要容器"
+        },
+        "ja": {
+          "string": "不要なコンテナを一時停止"
+        },
+        "ko": {
+          "string": "불필요한 컨테이너 일시 정지"
+        }
+      }
+    },
+    "Pause syncing while on battery": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "电池模式下暂停同步"
+        },
+        "zh-Hant": {
+          "string": "電池模式下暫停同步"
+        },
+        "ja": {
+          "string": "バッテリー駆動時に同期を一時停止"
+        },
+        "ko": {
+          "string": "배터리 모드에서 동기화 일시 정지"
+        }
+      }
+    },
+    "Power Status": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "耗电状态"
+        },
+        "zh-Hant": {
+          "string": "耗電狀態"
+        },
+        "ja": {
+          "string": "消費ステータス"
+        },
+        "ko": {
+          "string": "전력 상태"
+        }
+      }
+    },
+    "Preventing Mac from sleeping": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "正在阻止 Mac 睡眠"
+        },
+        "zh-Hant": {
+          "string": "正在阻止 Mac 睡眠"
+        },
+        "ja": {
+          "string": "Macのスリープを防止中"
+        },
+        "ko": {
+          "string": "Mac 절전 방지 중"
+        }
+      }
+    },
+    "Preventing Sleep": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "阻止睡眠"
+        },
+        "zh-Hant": {
+          "string": "阻止睡眠"
+        },
+        "ja": {
+          "string": "スリープ防止"
+        },
+        "ko": {
+          "string": "절전 방지"
+        }
+      }
+    },
+    "Preventing display sleep": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "阻止显示器睡眠"
+        },
+        "zh-Hant": {
+          "string": "阻止顯示器睡眠"
+        },
+        "ja": {
+          "string": "ディスプレイスリープ防止"
+        },
+        "ko": {
+          "string": "디스플레이 절전 방지"
+        }
+      }
+    },
+    "Preventing system sleep": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "阻止系统睡眠"
+        },
+        "zh-Hant": {
+          "string": "阻止系統睡眠"
+        },
+        "ja": {
+          "string": "システムスリープ防止"
+        },
+        "ko": {
+          "string": "시스템 절전 방지"
+        }
+      }
+    },
+    "Quit Power Lens": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "退出 Power Lens"
+        },
+        "zh-Hant": {
+          "string": "退出 Power Lens"
+        },
+        "ja": {
+          "string": "Power Lens を終了"
+        },
+        "ko": {
+          "string": "Power Lens 종료"
+        }
+      }
+    },
+    "Quit if not needed": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "如不需要可退出"
+        },
+        "zh-Hant": {
+          "string": "如不需要可退出"
+        },
+        "ja": {
+          "string": "不要なら終了"
+        },
+        "ko": {
+          "string": "필요 없으면 종료"
+        }
+      }
+    },
+    "Report a Bug": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "反馈问题"
+        },
+        "zh-Hant": {
+          "string": "回報問題"
+        },
+        "ja": {
+          "string": "バグを報告"
+        },
+        "ko": {
+          "string": "버그 보고"
+        }
+      }
+    },
+    "Restart the browser": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "重启浏览器"
+        },
+        "zh-Hant": {
+          "string": "重新啟動瀏覽器"
+        },
+        "ja": {
+          "string": "ブラウザを再起動"
+        },
+        "ko": {
+          "string": "브라우저 재시작"
+        }
+      }
+    },
+    "Restart the editor": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "重启编辑器"
+        },
+        "zh-Hant": {
+          "string": "重新啟動編輯器"
+        },
+        "ja": {
+          "string": "エディタを再起動"
+        },
+        "ko": {
+          "string": "편집기 재시작"
+        }
+      }
+    },
+    "Retention": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "保留时间"
+        },
+        "zh-Hant": {
+          "string": "保留時間"
+        },
+        "ja": {
+          "string": "保持期間"
+        },
+        "ko": {
+          "string": "보존 기간"
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "设置"
+        },
+        "zh-Hant": {
+          "string": "設定"
+        },
+        "ja": {
+          "string": "設定"
+        },
+        "ko": {
+          "string": "설정"
+        }
+      }
+    },
+    "Settings...": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "设置..."
+        },
+        "zh-Hant": {
+          "string": "設定..."
+        },
+        "ja": {
+          "string": "設定..."
+        },
+        "ko": {
+          "string": "설정..."
+        }
+      }
+    },
+    "Sleep": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "睡眠"
+        },
+        "zh-Hant": {
+          "string": "睡眠"
+        },
+        "ja": {
+          "string": "スリープ"
+        },
+        "ko": {
+          "string": "절전"
+        }
+      }
+    },
+    "Spotlight indexing": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "Spotlight 索引中"
+        },
+        "zh-Hant": {
+          "string": "Spotlight 索引中"
+        },
+        "ja": {
+          "string": "Spotlight インデックス中"
+        },
+        "ko": {
+          "string": "Spotlight 인덱싱 중"
+        }
+      }
+    },
+    "Status": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "状态"
+        },
+        "zh-Hant": {
+          "string": "狀態"
+        },
+        "ja": {
+          "string": "ステータス"
+        },
+        "ko": {
+          "string": "상태"
+        }
+      }
+    },
+    "Stop local databases or background services": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "停止本地数据库或后台服务"
+        },
+        "zh-Hant": {
+          "string": "停止本地資料庫或背景服務"
+        },
+        "ja": {
+          "string": "ローカルデータベースやバックグラウンドサービスを停止"
+        },
+        "ko": {
+          "string": "로컬 데이터베이스 또는 백그라운드 서비스 중지"
+        }
+      }
+    },
+    "Stop unused dev servers": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "停止未使用的开发服务器"
+        },
+        "zh-Hant": {
+          "string": "停止未使用的開發伺服器"
+        },
+        "ja": {
+          "string": "使用していない開発サーバーを停止"
+        },
+        "ko": {
+          "string": "사용하지 않는 개발 서버 중지"
+        }
+      }
+    },
+    "System keeping display active": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "系统保持显示器活跃"
+        },
+        "zh-Hant": {
+          "string": "系統保持顯示器活躍"
+        },
+        "ja": {
+          "string": "システムがディスプレイをアクティブに維持"
+        },
+        "ko": {
+          "string": "시스템이 디스플레이를 활성 상태로 유지"
+        }
+      }
+    },
+    "Terminal command keeping Mac awake": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "终端命令保持 Mac 唤醒"
+        },
+        "zh-Hant": {
+          "string": "終端命令保持 Mac 喚醒"
+        },
+        "ja": {
+          "string": "ターミナルコマンドがMacを起動状態に維持"
+        },
+        "ko": {
+          "string": "터미널 명령어로 Mac 절전 방지 중"
+        }
+      }
+    },
+    "This is normal system behavior in most cases": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "大多数情况下这是正常的系统行为"
+        },
+        "zh-Hant": {
+          "string": "大多數情況下這是正常的系統行為"
+        },
+        "ja": {
+          "string": "ほとんどの場合、正常なシステム動作です"
+        },
+        "ko": {
+          "string": "대부분의 경우 정상적인 시스템 동작입니다"
+        }
+      }
+    },
+    "Time Machine backup in progress": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "Time Machine 正在备份"
+        },
+        "zh-Hant": {
+          "string": "Time Machine 正在備份"
+        },
+        "ja": {
+          "string": "Time Machine バックアップ中"
+        },
+        "ko": {
+          "string": "Time Machine 백업 진행 중"
+        }
+      }
+    },
+    "Time Remaining": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "预计剩余"
+        },
+        "zh-Hant": {
+          "string": "預計剩餘"
+        },
+        "ja": {
+          "string": "残り時間"
+        },
+        "ko": {
+          "string": "남은 시간"
+        }
+      }
+    },
+    "Top Apps": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "高耗电应用"
+        },
+        "zh-Hant": {
+          "string": "高耗電應用"
+        },
+        "ja": {
+          "string": "高消費アプリ"
+        },
+        "ko": {
+          "string": "고전력 앱"
+        }
+      }
+    },
+    "Use audio-only mode if video is not needed": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "如不需要视频，使用纯音频模式"
+        },
+        "zh-Hant": {
+          "string": "如不需要影片，使用純音訊模式"
+        },
+        "ja": {
+          "string": "動画が不要なら音声のみモードを使用"
+        },
+        "ko": {
+          "string": "영상이 필요 없으면 오디오 전용 모드 사용"
+        }
+      }
+    },
+    "Usually temporary; consider excluding large directories if persistent": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "通常是临时的；如持续较久，可考虑排除大目录"
+        },
+        "zh-Hant": {
+          "string": "通常是臨時的；如持續較久，可考慮排除大目錄"
+        },
+        "ja": {
+          "string": "通常は一時的です。長く続く場合は大きなディレクトリの除外を検討"
+        },
+        "ko": {
+          "string": "보통 일시적입니다. 오래 지속되면 큰 디렉토리 제외 고려"
+        }
+      }
+    },
+    "Version %@ (%@)": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "版本 %@（%@）"
+        },
+        "zh-Hant": {
+          "string": "版本 %@（%@）"
+        },
+        "ja": {
+          "string": "バージョン %@（%@）"
+        },
+        "ko": {
+          "string": "버전 %@（%@）"
+        }
+      }
+    },
+    "Wait for backup to finish, or pause while on battery": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "等待备份完成，或在电池模式下暂停"
+        },
+        "zh-Hant": {
+          "string": "等待備份完成，或在電池模式下暫停"
+        },
+        "ja": {
+          "string": "バックアップ完了を待つか、バッテリー駆動時は一時停止"
+        },
+        "ko": {
+          "string": "백업 완료 대기 또는 배터리 모드에서 일시 정지"
+        }
+      }
+    },
+    "Wait for the task to complete": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "等待任务完成"
+        },
+        "zh-Hant": {
+          "string": "等待任務完成"
+        },
+        "ja": {
+          "string": "タスク完了を待つ"
+        },
+        "ko": {
+          "string": "작업 완료 대기"
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
