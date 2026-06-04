@@ -30,3 +30,6 @@ Package.resolved
 .env
 .env.*
 credentials*
+
+# User-specific Xcode config (DEVELOPMENT_TEAM etc.)
+*.xcconfig

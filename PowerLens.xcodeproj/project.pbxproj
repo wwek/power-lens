@@ -260,6 +260,7 @@
 /* Begin XCBuildConfiguration section */
 		A1000901000000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = PowerLens.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -288,6 +289,7 @@
 		};
 		A1000902000000000000001 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = PowerLens.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
