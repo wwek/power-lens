@@ -51,6 +51,14 @@ if [ ! -d "${APP_PATH}" ]; then
     exit 1
 fi
 
+# Re-sign with hardened runtime (required for notarization)
+if [ -n "${SIGN_IDENTITY}" ]; then
+    echo "==> Re-signing with hardened runtime..."
+    codesign --deep --force --options runtime --timestamp \
+        --sign "${SIGN_IDENTITY}" \
+        "${APP_PATH}" 2>&1 && echo "    Hardened runtime signed ✓"
+fi
+
 # Verify signature
 echo "==> Verifying signature..."
 codesign --verify --deep --strict "${APP_PATH}" 2>&1 && echo "    Signature valid ✓" || {
@@ -59,7 +67,7 @@ codesign --verify --deep --strict "${APP_PATH}" 2>&1 && echo "    Signature vali
 }
 
 # Notarize
-NOTARIZE_PROFILE="${NOTARIZE_PROFILE:-}"
+NOTARIZE_PROFILE="${NOTARIZE_PROFILE:-power-lens-notary}"
 if [ -n "${NOTARIZE_PROFILE}" ]; then
     echo "==> Notarizing..."
     # Create ZIP for notarization
