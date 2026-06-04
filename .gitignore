@@ -9,6 +9,7 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 *.dmg
+Power_Lens_*.zip
 
 # SPM
 .build/

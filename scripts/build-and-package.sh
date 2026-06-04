@@ -4,6 +4,7 @@ set -euo pipefail
 # Build Power Lens and package as ZIP + DMG
 # Usage: ./scripts/build-and-package.sh [version]
 # Auto-increments CFBundleVersion on each build.
+# Auto-detects signing identity (Developer ID > Apple Development > adhoc).
 
 PROJECT="PowerLens.xcodeproj"
 SCHEME="Power Lens"
@@ -11,10 +12,26 @@ APP_NAME="Power Lens"
 CONFIG="Release"
 PLIST="PowerLens/Resources/Info.plist"
 
+# Detect signing identity
+SIGN_IDENTITY=$(security find-identity -v -p codesigning 2>/dev/null \
+    | grep "Developer ID Application" | head -1 | sed 's/.*"\(.*\)".*/\1/' || true)
+
+if [ -z "$SIGN_IDENTITY" ]; then
+    SIGN_IDENTITY=$(security find-identity -v -p codesigning 2>/dev/null \
+        | grep "Apple Development" | head -1 | sed 's/.*"\(.*\)".*/\1/' || true)
+fi
+
+if [ -n "$SIGN_IDENTITY" ]; then
+    echo "==> Signing identity: ${SIGN_IDENTITY}"
+    CODE_SIGN_FLAGS="CODE_SIGN_IDENTITY=\"${SIGN_IDENTITY}\" CODE_SIGN_STYLE=Manual"
+else
+    echo "==> No signing identity found, building unsigned"
+    CODE_SIGN_FLAGS="CODE_SIGN_IDENTITY=\"-\" CODE_SIGNING_REQUIRED=NO"
+fi
+
 # Determine version
 if [ -n "${1:-}" ]; then
     VERSION="$1"
-    # Update marketing version if specified
     /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${VERSION}" "$PLIST"
 else
     VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "$PLIST" 2>/dev/null || echo "0.1.0")
@@ -27,10 +44,20 @@ BUILD_NUM=$((BUILD_NUM + 1))
 
 echo "==> Building ${APP_NAME} v${VERSION} (${BUILD_NUM})..."
 
-# Build Release using cached SPM packages
 DERIVED_DATA="build"
-xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" \
-    -derivedDataPath "${DERIVED_DATA}" build 2>&1 | tail -1
+if [ -n "$SIGN_IDENTITY" ]; then
+    xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" \
+        -derivedDataPath "${DERIVED_DATA}" \
+        CODE_SIGN_IDENTITY="${SIGN_IDENTITY}" \
+        CODE_SIGN_STYLE=Manual \
+        build 2>&1 | tail -1
+else
+    xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" \
+        -derivedDataPath "${DERIVED_DATA}" \
+        CODE_SIGN_IDENTITY="-" \
+        CODE_SIGNING_REQUIRED=NO \
+        build 2>&1 | tail -1
+fi
 
 APP_PATH="${DERIVED_DATA}/Build/Products/${CONFIG}/${APP_NAME}.app"
 if [ ! -d "${APP_PATH}" ]; then
@@ -39,6 +66,10 @@ if [ ! -d "${APP_PATH}" ]; then
 fi
 
 echo "    App: ${APP_PATH}"
+
+# Verify signature
+echo "==> Verifying signature..."
+codesign -dv "${APP_PATH}" 2>&1 | grep -q "Signature size" && echo "    Signed ✓" || echo "    Unsigned"
 
 # Package
 ZIP_NAME="Power_Lens_v${VERSION}.zip"
