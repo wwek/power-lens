@@ -57,6 +57,9 @@ struct MenuBarPanel: View {
             Spacer()
             Button {
                 openWindow(id: "main")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    NSApp.activate(ignoringOtherApps: true)
+                }
             } label: {
                 Image(systemName: "macwindow")
                     .font(.callout)

@@ -3,38 +3,47 @@ set -euo pipefail
 
 # Build Power Lens and package as ZIP + DMG
 # Usage: ./scripts/build-and-package.sh [version]
+# Auto-increments CFBundleVersion on each build.
 
 PROJECT="PowerLens.xcodeproj"
 SCHEME="Power Lens"
 APP_NAME="Power Lens"
 CONFIG="Release"
+PLIST="PowerLens/Resources/Info.plist"
 
 # Determine version
 if [ -n "${1:-}" ]; then
     VERSION="$1"
+    # Update marketing version if specified
+    /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${VERSION}" "$PLIST"
 else
-    VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" \
-        "PowerLens/Resources/Info.plist" 2>/dev/null || echo "0.1.0")
+    VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "$PLIST" 2>/dev/null || echo "0.1.0")
 fi
 
-ZIP_NAME="Power_Lens_v${VERSION}.zip"
-DMG_NAME="Power_Lens_v${VERSION}.dmg"
-VOLUME_NAME="Power Lens"
+# Auto-increment build number
+BUILD_NUM=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "$PLIST" 2>/dev/null || echo "0")
+BUILD_NUM=$((BUILD_NUM + 1))
+/usr/libexec/PlistBuddy -c "Set :CFBundleVersion ${BUILD_NUM}" "$PLIST"
 
-echo "==> Building ${APP_NAME} v${VERSION}..."
+echo "==> Building ${APP_NAME} v${VERSION} (${BUILD_NUM})..."
 
-xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" build \
-    2>&1 | tail -1
+# Build Release using cached SPM packages
+DERIVED_DATA="build"
+xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" \
+    -derivedDataPath "${DERIVED_DATA}" build 2>&1 | tail -1
 
-# Find the built app
-DERIVED=$(ls -d ~/Library/Developer/Xcode/DerivedData/PowerLens-*/Build/Products/${CONFIG}/ 2>/dev/null | head -1)
-if [ -z "${DERIVED}" ] || [ ! -d "${DERIVED}${APP_NAME}.app" ]; then
-    echo "Error: ${APP_NAME}.app not found in DerivedData" >&2
+APP_PATH="${DERIVED_DATA}/Build/Products/${CONFIG}/${APP_NAME}.app"
+if [ ! -d "${APP_PATH}" ]; then
+    echo "Error: ${APP_NAME}.app not found" >&2
     exit 1
 fi
 
-APP_PATH="${DERIVED}${APP_NAME}.app"
 echo "    App: ${APP_PATH}"
+
+# Package
+ZIP_NAME="Power_Lens_v${VERSION}.zip"
+DMG_NAME="Power_Lens_v${VERSION}.dmg"
+VOLUME_NAME="Power Lens"
 
 echo "==> Packaging..."
 
@@ -43,14 +52,14 @@ trap "rm -rf '${STAGING_DIR}'" EXIT
 
 cp -R "${APP_PATH}" "${STAGING_DIR}/"
 
-# Create ZIP
+# ZIP
 echo "    Creating ZIP..."
 rm -f "${ZIP_NAME}"
 cd "${STAGING_DIR}"
 zip -r -q "${OLDPWD}/${ZIP_NAME}" "${APP_NAME}.app"
 cd "${OLDPWD}"
 
-# Create DMG
+# DMG
 echo "    Creating DMG..."
 ln -s /Applications "${STAGING_DIR}/Applications"
 rm -f "${DMG_NAME}"

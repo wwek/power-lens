@@ -5,6 +5,10 @@ struct PowerLensApp: App {
     @State private var viewModel = PowerLensViewModel()
     @Environment(\.openWindow) private var openWindow
 
+    init() {
+        applyLanguageOverride()
+    }
+
     var body: some Scene {
         MenuBarExtra {
             MenuBarPanel()
@@ -18,6 +22,7 @@ struct PowerLensApp: App {
         Window("Power Lens", id: "main") {
             MainWindow()
                 .environment(viewModel)
+                .onAppear { NSApp.activate(ignoringOtherApps: true) }
         }
         .defaultSize(width: 640, height: 520)
     }
@@ -43,5 +48,12 @@ struct PowerLensApp: App {
         case 60..<80: return .orange
         default: return .red
         }
+    }
+
+    private func applyLanguageOverride() {
+        let lang = UserDefaults.standard.string(forKey: "language") ?? ""
+        guard !lang.isEmpty else { return }
+        UserDefaults.standard.set([lang], forKey: "AppleLanguages")
+        UserDefaults.standard.set(lang, forKey: "AppleLocale")
     }
 }
