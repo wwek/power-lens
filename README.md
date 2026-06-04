@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="PowerLens/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-512.png" alt="Power Lens" width="128" height="128">
+  <img src="PowerLens/Resources/Assets.xcassets/AppIcon.appiconset/icon_512.png" alt="Power Lens" width="128" height="128">
 </p>
 
 <h1 align="center">Power Lens</h1>
