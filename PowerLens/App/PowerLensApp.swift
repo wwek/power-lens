@@ -20,10 +20,6 @@ struct PowerLensApp: App {
                 .environment(viewModel)
         }
         .defaultSize(width: 640, height: 520)
-
-        Settings {
-            SettingsView()
-        }
     }
 
     @ViewBuilder

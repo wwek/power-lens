@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# Build Power Lens and package as DMG
+# Build Power Lens and package as ZIP + DMG
 # Usage: ./scripts/build-and-package.sh [version]
 
 PROJECT="PowerLens.xcodeproj"
@@ -17,12 +17,12 @@ else
         "PowerLens/Resources/Info.plist" 2>/dev/null || echo "0.1.0")
 fi
 
-DMG_NAME="Power_Lens_${VERSION}.dmg"
+ZIP_NAME="Power_Lens_v${VERSION}.zip"
+DMG_NAME="Power_Lens_v${VERSION}.dmg"
 VOLUME_NAME="Power Lens"
 
 echo "==> Building ${APP_NAME} v${VERSION}..."
 
-# Build Release
 xcodebuild -project "${PROJECT}" -scheme "${SCHEME}" -configuration "${CONFIG}" build \
     2>&1 | tail -1
 
@@ -36,16 +36,24 @@ fi
 APP_PATH="${DERIVED}${APP_NAME}.app"
 echo "    App: ${APP_PATH}"
 
-echo "==> Packaging DMG..."
+echo "==> Packaging..."
 
 STAGING_DIR=$(mktemp -d)
 trap "rm -rf '${STAGING_DIR}'" EXIT
 
 cp -R "${APP_PATH}" "${STAGING_DIR}/"
+
+# Create ZIP
+echo "    Creating ZIP..."
+rm -f "${ZIP_NAME}"
+cd "${STAGING_DIR}"
+zip -r -q "${OLDPWD}/${ZIP_NAME}" "${APP_NAME}.app"
+cd "${OLDPWD}"
+
+# Create DMG
+echo "    Creating DMG..."
 ln -s /Applications "${STAGING_DIR}/Applications"
-
 rm -f "${DMG_NAME}"
-
 hdiutil create \
     -volname "${VOLUME_NAME}" \
     -srcfolder "${STAGING_DIR}" \
@@ -55,8 +63,12 @@ hdiutil create \
     "${DMG_NAME}" \
     >/dev/null 2>&1
 
+ZIP_SIZE=$(du -h "${ZIP_NAME}" | cut -f1)
 DMG_SIZE=$(du -h "${DMG_NAME}" | cut -f1)
-echo "    Created: ${DMG_NAME} (${DMG_SIZE})"
 echo ""
-echo "==> Done! Upload to GitHub with:"
-echo "    gh release create v${VERSION} '${DMG_NAME}' --title '${APP_NAME} v${VERSION}'"
+echo "==> Done!"
+echo "    ${ZIP_NAME} (${ZIP_SIZE})"
+echo "    ${DMG_NAME} (${DMG_SIZE})"
+echo ""
+echo "Upload to GitHub with:"
+echo "    gh release create v${VERSION} '${ZIP_NAME}' '${DMG_NAME}' --title '${APP_NAME} v${VERSION}'"

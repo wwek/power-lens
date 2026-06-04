@@ -1,10 +1,12 @@
 import SwiftUI
+import ServiceManagement
 
 enum MainWindowPage: String, CaseIterable, Hashable {
     case overview
     case apps
     case sleep
     case history
+    case settings
     case about
 
     var localizedLabel: String {
@@ -13,6 +15,7 @@ enum MainWindowPage: String, CaseIterable, Hashable {
         case .apps: String(localized: "Top Apps")
         case .sleep: String(localized: "Sleep")
         case .history: String(localized: "History")
+        case .settings: String(localized: "Settings")
         case .about: String(localized: "About")
         }
     }
@@ -23,6 +26,7 @@ enum MainWindowPage: String, CaseIterable, Hashable {
         case .apps: "list.bullet.clipboard"
         case .sleep: "bed.double"
         case .history: "clock.arrow.circlepath"
+        case .settings: "gear"
         case .about: "info.circle"
         }
     }
@@ -66,6 +70,13 @@ struct MainWindow: View {
                 Divider()
 
                 Label {
+                    Text(MainWindowPage.settings.localizedLabel)
+                } icon: {
+                    Image(systemName: MainWindowPage.settings.systemIcon)
+                }
+                .tag(MainWindowPage.settings)
+
+                Label {
                     Text(MainWindowPage.about.localizedLabel)
                 } icon: {
                     Image(systemName: MainWindowPage.about.systemIcon)
@@ -87,6 +98,7 @@ struct MainWindow: View {
         case .apps: TopAppsPage()
         case .sleep: SleepPage()
         case .history: HistoryPage()
+        case .settings: SettingsPage()
         case .about: AboutPage()
         }
     }
@@ -406,6 +418,135 @@ private struct AboutPage: View {
             .padding(.bottom, 24)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+}
+
+// MARK: - Settings
+
+private struct SettingsPage: View {
+    @State private var settings = AppSettings.shared
+
+    private let intervalOptions: [(String, TimeInterval)] = [
+        ("3s", 3.0),
+        ("5s", 5.0),
+        ("10s", 10.0),
+        ("30s", 30.0),
+    ]
+
+    private let retentionOptions: [(String, Int)] = [
+        ("1 day", 1),
+        ("3 days", 3),
+        ("7 days", 7),
+        ("14 days", 14),
+    ]
+
+    private let languageOptions: [(String, String)] = [
+        ("Follow System", ""),
+        ("English", "en"),
+        ("简体中文", "zh-Hans"),
+        ("繁體中文", "zh-Hant"),
+        ("日本語", "ja"),
+        ("한국어", "ko"),
+    ]
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                generalSection
+                collectionSection
+                alertsSection
+                historySection
+                languageSection
+            }
+            .padding(24)
+        }
+    }
+
+    private var generalSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(String(localized: "General"), systemImage: "gear")
+                .font(.headline)
+            Toggle(String(localized: "Launch at Login"), isOn: $settings.launchAtLogin)
+                .onChange(of: settings.launchAtLogin) { _, newValue in
+                    do {
+                        if newValue {
+                            try SMAppService.mainApp.register()
+                        } else {
+                            try SMAppService.mainApp.unregister()
+                        }
+                    } catch {
+                        settings.launchAtLogin = !newValue
+                    }
+                }
+        }
+        .padding()
+        .background(.background.secondary)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+
+    private var collectionSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(String(localized: "Collection"), systemImage: "arrow.triangle.2.circlepath")
+                .font(.headline)
+            Picker(String(localized: "Collection Interval"), selection: $settings.collectionInterval) {
+                ForEach(intervalOptions, id: \.1) { label, value in
+                    Text(label).tag(value)
+                }
+            }
+        }
+        .padding()
+        .background(.background.secondary)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+
+    private var alertsSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(String(localized: "Alerts"), systemImage: "bell")
+                .font(.headline)
+            Picker(String(localized: "Low Battery Threshold"), selection: $settings.lowBatteryThreshold) {
+                ForEach(10...50, id: \.self) { val in
+                    Text("\(val)%").tag(val)
+                }
+            }
+        }
+        .padding()
+        .background(.background.secondary)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+
+    private var historySection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(String(localized: "History"), systemImage: "clock.arrow.circlepath")
+                .font(.headline)
+            Picker(String(localized: "Retention"), selection: $settings.historyRetentionDays) {
+                ForEach(retentionOptions, id: \.1) { label, value in
+                    Text(String(localized: "\(label)")).tag(value)
+                }
+            }
+        }
+        .padding()
+        .background(.background.secondary)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+
+    private var languageSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(String(localized: "Language"), systemImage: "globe")
+                .font(.headline)
+            Picker(String(localized: "Display Language"), selection: $settings.language) {
+                ForEach(languageOptions, id: \.1) { label, value in
+                    Text(String(localized: "\(label)")).tag(value)
+                }
+            }
+            if !settings.language.isEmpty {
+                Text(String(localized: "Language change takes effect after restart"))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding()
+        .background(.background.secondary)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
 

@@ -8,6 +8,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.dmg
 
 # SPM
 .build/

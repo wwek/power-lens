@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A1000101000000000000001 /* PowerLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000201000000000000001 /* PowerLensApp.swift */; };
 		A1000102000000000000001 /* MenuBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000202000000000000001 /* MenuBarPanel.swift */; };
-		A1000103000000000000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000203000000000000001 /* SettingsView.swift */; };
 		A1000104000000000000001 /* PowerLensViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000206000000000000001 /* PowerLensViewModel.swift */; };
 		A1000110000000000000001 /* BatteryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000210000000000000001 /* BatteryInfo.swift */; };
 		A1000111000000000000001 /* ProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000211000000000000001 /* ProcessInfo.swift */; };
@@ -30,7 +29,6 @@
 /* Begin PBXFileReference section */
 		A1000201000000000000001 /* PowerLensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerLensApp.swift; sourceTree = "<group>"; };
 		A1000202000000000000001 /* MenuBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPanel.swift; sourceTree = "<group>"; };
-		A1000203000000000000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A1000204000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1000205000000000000001 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1000206000000000000001 /* PowerLensViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerLensViewModel.swift; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 				A1000206000000000000001 /* PowerLensViewModel.swift */,
 				A1000208000000000000001 /* MainWindow.swift */,
 				A1000202000000000000001 /* MenuBarPanel.swift */,
-				A1000203000000000000001 /* SettingsView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -239,7 +236,6 @@
 				A1000104000000000000001 /* PowerLensViewModel.swift in Sources */,
 				A1000136000000000000001 /* MainWindow.swift in Sources */,
 				A1000102000000000000001 /* MenuBarPanel.swift in Sources */,
-				A1000103000000000000001 /* SettingsView.swift in Sources */,
 				A1000120000000000000001 /* BatteryCollector.swift in Sources */,
 				A1000121000000000000001 /* ProcessCollector.swift in Sources */,
 				A1000122000000000000001 /* SleepAssertionCollector.swift in Sources */,

@@ -481,6 +481,38 @@
         }
       }
     },
+    "Display Language": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "显示语言"
+        },
+        "zh-Hant": {
+          "string": "顯示語言"
+        },
+        "ja": {
+          "string": "表示言語"
+        },
+        "ko": {
+          "string": "표시 언어"
+        }
+      }
+    },
+    "Follow System": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "跟随系统"
+        },
+        "zh-Hant": {
+          "string": "跟隨系統"
+        },
+        "ja": {
+          "string": "システムに従う"
+        },
+        "ko": {
+          "string": "시스템 설정 따르기"
+        }
+      }
+    },
     "General": {
       "localizations": {
         "zh-Hans": {
@@ -622,6 +654,38 @@
         },
         "ko": {
           "string": "Mac 절전 방지 중"
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "语言"
+        },
+        "zh-Hant": {
+          "string": "語言"
+        },
+        "ja": {
+          "string": "言語"
+        },
+        "ko": {
+          "string": "언어"
+        }
+      }
+    },
+    "Language change takes effect after restart": {
+      "localizations": {
+        "zh-Hans": {
+          "string": "语言更改将在重启后生效"
+        },
+        "zh-Hant": {
+          "string": "語言更改將在重啟後生效"
+        },
+        "ja": {
+          "string": "言語の変更は再起動後に反映されます"
+        },
+        "ko": {
+          "string": "언어 변경은 재시작 후 적용됩니다"
         }
       }
     },

@@ -3,7 +3,6 @@ import SwiftUI
 struct MenuBarPanel: View {
     @Environment(PowerLensViewModel.self) private var vm
     @Environment(\.openWindow) private var openWindow
-    @Environment(\.openSettings) private var openSettings
 
     var body: some View {
         @Bindable var vm = vm
@@ -215,7 +214,7 @@ struct MenuBarPanel: View {
         HStack {
             Spacer()
             Button {
-                openSettings()
+                openWindow(id: "main")
             } label: {
                 Image(systemName: "gear")
             }
